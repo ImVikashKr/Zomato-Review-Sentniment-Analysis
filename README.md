@@ -1,4 +1,6 @@
 # Zomato-Review-Sentniment-Analysis
+This project aims to analyze customer sentiment towards restaurants using Zomato restaurant review data and segmenting them based on factors such as cost, cuisine, and other attributes.
+
 Divided restaurants into segments using clustering techniques(PCA for visualtisations also) and also did sentiment analysis for the reviews.
 
 First, I used KMeans clustering to cluster the restaurant based on cost, different cuisines, locality and meta-tags. Once a similar clusters of restaurants formed, I tried to analyse various clusters and look for some trend in the data.
@@ -35,6 +37,19 @@ Data Cleaning - We have to drop the entire feature as there are 50% null values.
 Feature Selection - For sentiment analysis, we have used rating and reviews features. - For clustering we got cost, cuisine and timing of the restaurant as the features to build the model.
 Model development - For sentiment analysis, developed different models like:- Multinomial NB, Logistic regression, Random forest classifier - For clustering the restaurants we have used the k-means and hirerchical clustering
 
+# Feature Engineering
+1. Exploratory data analysis and text preprocessing were performed.
+2. Data cleaning was performed by dropping entire features that had 50% null values.
+3. Feature selection was used for sentiment analysis, using the rating and reviews features.
+4. For clustering, the cost, cuisine and timing of the restaurant were used as features to build the model.
+
+# Algorithms Used
+1. KMeans Clustering
+2. Hierarchical Clustering
+3. Multinomial Naive Bayes
+4. Logistic Regression
+5. Random Forest Classifier
+
 # Needs of this project
 data exploration
 data processing/cleaning
@@ -42,11 +57,27 @@ text preprocessing/cleaning
 sentiment analysis on reviews
 cluster the restaurant into different segments.
 
-# Sentiment analysis
--Plotted the distribution of ratings to have an understanding of the proportion of good and bad reviews. -Made many visualizations which include, top 10/bottom 10 restaurants in terms of average rating. -Had a clear understanding of the cost summary of the restaurants. -Done pre-processing such as removing emojis, punctuations and only used Adjectives and verbs to reduce dimensionality. -TF-IDF vectorizer was used to transform the dataset. -Used TextBlob() to do sentiment analysis. Got a rmse score of 0.88. -Prepared a word cloud for positive as well as negative phrases.
+# Sentiment Analysis
+1. Plotted the distribution of ratings to have an understanding of the proportion of good and bad reviews.
+2. Created visualizations including top 10/bottom 10 restaurants in terms of average rating.
+3. Pre-processing was done such as removing emojis, punctuations and only used Adjectives and verbs to reduce dimensionality.
+4. TF-IDF vectorizer was used to transform the dataset.
+5. TextBlob() was used to do sentiment analysis.
+6. A rmse score of 0.88 was achieved.
+7. Created a word cloud for positive as well as negative phrases.
 
 # Clustering
--Calculated the time each Restaurant was opened weekly. -Did the pre-processing, Clubbed some cuisines together so that one-hot encoding would be possible. -Removed the unwanted variables and Normalized the data. -Clustered the data using K-means as well as Hierarchical clustering.
+1. Calculated the time each Restaurant was opened weekly.
+2. Pre-processing was done by clubbing some cuisines together so that one-hot encoding would be possible, removed unwanted variables and normalized the data.
+3. Clustered the data using K-means and Hierarchical clustering.
+
+# Future Scope
+1. Incorporating more data from other sources such as social media to get a more complete picture of customer sentiment towards restaurants.
+2. Enhancing the model using more advanced techniques such as deep learning and neural networks.
+3. Predictive modeling using the segmented and analyzed data to predict customer sentiment or restaurant success in the future.
+4. Building a recommendation system that can recommend restaurants to customers based on their preferences and past experiences.
+5. Integrating with other systems such as a restaurant's website or mobile app, to provide real-time recommendations and feedback to customers.
+6. Improving the visualizations by creating more interactive and dynamic visualizations that allow the user to explore the data in more detail.
 
 # Conclusions
-Divided restaurants into segments using clustering techniques and also did sentiment analysis for the reviews.
+The end output of the project is segmented restaurants and useful conclusions from the customer reviews which can be used by the restaurant industry to improve their offerings, pricing strategies, and target marketing efforts. The project also provides a way to improve customer service and make sure that customer complaints are addressed in a timely manner.
